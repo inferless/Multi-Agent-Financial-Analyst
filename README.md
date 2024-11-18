@@ -23,8 +23,8 @@ To access the custom runtime window in Inferless, simply navigate to the sidebar
 
 Next, provide a suitable name for your custom runtime and proceed by uploading the inferless-runtime.yaml file given above. Finally, ensure you save your changes by clicking on the save button.
 
-### Add Your Hugging Face Auth Token
-Go into the `inferless.yaml` and  add your hugging face access token. Make sure to check the repo is private to protect your hugging face key.
+### Add Your SERPER_API_KEY and OPENAI_API_KEY
+Go into the `inferless.yaml` and  add your `SERPER_API_KEY` and set some values for `OPENAI_API_KEY` as we are using local LLM. Make sure to check the repo is private to protect your API keys.
 
 ### Import the Model in Inferless
 Log in to your inferless account, select the workspace you want the model to be imported into and click the Add Model button.
