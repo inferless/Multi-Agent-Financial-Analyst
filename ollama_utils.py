@@ -2,7 +2,6 @@ import subprocess
 import requests
 import time
 import json
-import shutil
 
 
 def start_and_check_ollama(model_name):
