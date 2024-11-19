@@ -1,7 +1,8 @@
 # Cookbook: Multi-Agent-Financial-Analyst
 - Welcome to an engaging tutorial designed to walk you through building a multi-agent system for financial analysis. Learn how to leverage multiple AI agents with LLM, to perform detailed stock analysis and generate financial investment reports.
 ## Architecture
-<img width="1339" alt="image" src="https://github.com/user-attachments/assets/4abae35d-e7d4-4121-a88b-75822ff2cac5">
+
+<img width="1339" alt="image" src="https://github.com/user-attachments/assets/d65e535e-ad91-42b5-8cfb-a8834dc42627">
 
 ---
 ## Prerequisites
