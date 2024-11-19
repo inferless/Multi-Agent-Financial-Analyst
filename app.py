@@ -8,7 +8,7 @@ from agent_tools import yf_fundamental_analysis
 
 class InferlessPythonModel:
     def initialize(self):
-        model_name = "hf.co/bartowski/Meta-Llama-3.1-70B-Instruct-GGUF:Q3_K_L"
+        model_name = "hf.co/bartowski/Meta-Llama-3.1-70B-Instruct-GGUF:Q4_K_L"
         ollama_status = start_and_check_ollama(model_name)
         if ollama_status:
           self.llm =LLM(model=f"ollama/{model_name}")
