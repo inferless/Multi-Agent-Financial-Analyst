@@ -48,6 +48,6 @@ def start_and_check_ollama(model_name):
                 return True
         except requests.exceptions.RequestException:
             pass
-        time.sleep(3)
+        time.sleep(2)
     else:
         return False
