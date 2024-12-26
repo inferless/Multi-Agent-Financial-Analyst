@@ -17,7 +17,7 @@ class InferlessPythonModel:
                                 generate_kwargs={"temperature": 0.001, "do_sample":True}, 
                                 max_new_tokens=5000
                             )
-        self.finance_agent = ReActAgent.from_tools(tools=tools, llm=llm, verbose=True)
+        self.finance_agent = ReActAgent.from_tools(tools=tools, llm=llm, verbose=True,max_iterations=20)
 
     def infer(self, inputs):
         user_query = inputs["user_query"]
