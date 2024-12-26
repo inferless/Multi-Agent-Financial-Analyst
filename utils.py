@@ -1,13 +1,4 @@
 def flatten_dict(mapping: dict, prefix="")-> str:
-    '''
-    Flattens dictionary to string
-    Example: 
-    Input -> {'name': 'Apple', 'Address': 'CA, US', 'closePrice': 229.9}
-    Output ->
-    name - Apple
-    Address - CA, US
-    closePrice - 229.9
-    '''
     total_txt = ""
     for key, val in mapping.items():
         if type(val) in [str, float, int]:
@@ -24,8 +15,8 @@ def flatten_dict(mapping: dict, prefix="")-> str:
                 total_txt += f"{key} - {val}\n"
     return total_txt
 
-def create_stock_analysis_prompt(user_query):
-    return f"""You are a stock analysis expert. Find the [stock_symbol] from the [user_query] and Analyze [stock_symbol] and respond in this exact format:
+def create_stock_analysis_prompt(stock_symbol):
+    return f"""You are a stock analysis expert. Analyze {stock_symbol} and respond in this exact format:
 
                 SUMMARY
                 [Provide 2-3 sentence overview of current stock position]
@@ -58,5 +49,5 @@ def create_stock_analysis_prompt(user_query):
                 Confidence Level: [High/Medium/Low]
                 Rationale: [2-3 sentences explaining the recommendation]
 
-                USER QUERY: {user_query}
+                USER QUERY: Give me a complete Analysis of {stock_symbol} stock.
             """

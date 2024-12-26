@@ -1,8 +1,8 @@
 INPUT_SCHEMA = {
-    "user_query": {
+    "stock_symbol": {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
-        'example': ["Give me a complete Analysis of Apple stock"]
+        'example': ["AAPL"]
     }
 }
