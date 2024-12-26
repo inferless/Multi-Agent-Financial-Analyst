@@ -4,9 +4,6 @@ from llama_index.core.agent import ReActAgent, FunctionCallingAgentWorker
 from llama_index.llms.huggingface import HuggingFaceLLM
 from tools import yf_fundamental_analysis
 from utils import flatten_dict, create_stock_analysis_prompt
-from vllm import LLM
-from vllm.sampling_params import SamplingParams
-from transformers import AutoTokenizer
 
 
 class InferlessPythonModel:
