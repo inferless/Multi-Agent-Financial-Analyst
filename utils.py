@@ -24,21 +24,8 @@ def flatten_dict(mapping: dict, prefix="")-> str:
                 total_txt += f"{key} - {val}\n"
     return total_txt
 
-# prompt = "Give me a complete Analysis of Apple stock"
-# agent_prompt = f"""You are a stock analysis expert and you need to response to you user query in a format.
-#                    Conduct an in-depth analysis of the financial performance and market position of "stock_symbol",
-#                    Conduct a comprehensive fundamental analysis of "stock_symbol", focusing on financial statements, valuation metrics, and key value drivers to assess intrinsic value.,
-#                    Provide comprehensive stock analyses and strategic investment recommendations to impress a high-profile client.,
-#                    Here is you a query from an user: {prompt}
-# """
-# response = finance_agent.query(agent_prompt)
-
-# print(str(response))
-
-
-
-def create_stock_analysis_prompt(stock_symbol, user_query):
-    return f"""You are a stock analysis expert. Analyze {stock_symbol} and respond in this exact format:
+def create_stock_analysis_prompt(user_query):
+    return f"""You are a stock analysis expert. Find the [stock_symbol] from the [user_query] and Analyze [stock_symbol] and respond in this exact format:
 
                 SUMMARY
                 [Provide 2-3 sentence overview of current stock position]

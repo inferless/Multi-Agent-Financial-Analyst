@@ -20,10 +20,11 @@ class InferlessPythonModel:
         self.finance_agent = ReActAgent.from_tools(tools=tools, llm=llm, verbose=True)
 
     def infer(self, inputs):
-        prompt = create_stock_analysis_prompt("AAPL", "Give me a complete Analysis of Apple stock")
+        user_query = inputs["user_query"]
+        prompt = create_stock_analysis_prompt(user_query)
         response = self.finance_agent.query(prompt)
 
         return {'generated_summary': response.response}
 
     def finalize(self):
-        self.llm = None
+        self.finance_agent = None
