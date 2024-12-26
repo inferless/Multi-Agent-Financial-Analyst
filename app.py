@@ -11,8 +11,8 @@ class InferlessPythonModel:
         yf_fundamental_analysis_tool = FunctionTool.from_defaults(fn=yf_fundamental_analysis)
         tools = [yf_fundamental_analysis_tool]+YahooFinanceToolSpec().to_tool_list()
         llm = HuggingFaceLLM(
-                                model_name="unsloth/Meta-Llama-3.1-8B-Instruct", 
-                                tokenizer_name="unsloth/Meta-Llama-3.1-8B-Instruct", 
+                                model_name="unsloth/Llama-3.2-3B-Instruct", 
+                                tokenizer_name="unsloth/Llama-3.2-3B-Instruct", 
                                 device_map="auto", 
                                 generate_kwargs={"temperature": 0.001, "do_sample":True}, 
                                 max_new_tokens=5000
