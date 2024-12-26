@@ -1,5 +1,5 @@
 INPUT_SCHEMA = {
-    "stock_symbol": {
+    "user_query": {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
